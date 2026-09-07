@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161f2e"/>
+      <stop offset="100%" stop-color="#0d1420"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="txt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="url(#ring)" stroke-width="3" stroke-dasharray="8 10" opacity="0.6"/>
+  <circle cx="200" cy="170" r="60" fill="none" stroke="#22d3ee" stroke-width="2.5" opacity="0.5"/>
+  <path d="M110 320 Q200 230 290 320 L290 340 Q200 340 110 340 Z" fill="none" stroke="#22d3ee" stroke-width="2.5" opacity="0.5"/>
+  <text x="200" y="215" font-family="Space Grotesk, Arial, sans-serif" font-size="72" font-weight="700" fill="url(#txt)" text-anchor="middle">KM</text>
+  <text x="200" y="375" font-family="JetBrains Mono, monospace" font-size="13" fill="#5b6b82" text-anchor="middle" letter-spacing="1">ADD YOUR PHOTO HERE</text>
+</svg>
