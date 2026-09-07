@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaylan Moonsamy | Software Developer Portfolio</title>
+<meta name="description" content="Portfolio of Kaylan Moonsamy — Junior Software Developer specializing in C#, ASP.NET MVC and full-stack web applications.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Custom cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Loading overlay -->
+<div class="loader" id="loader">
+  <div class="loader-logo">KM<span class="loader-dot">.</span></div>
+</div>
+
+<!-- Progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Navigation -->
+<header class="navbar" id="navbar">
+  <nav class="nav-container">
+    <a href="#home" class="logo">Kaylan<span class="accent">.</span>dev</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#websites" class="nav-link" data-section="websites">Websites</a></li>
+      <li><a href="#interests" class="nav-link" data-section="interests">Interests</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Hero / Home -->
+<section id="home" class="hero">
+  <canvas id="particles"></canvas>
+  <div class="hero-content">
+    <p class="hero-greeting reveal">Hello, I'm</p>
+    <h1 class="hero-name reveal">Kaylan Moonsamy</h1>
+    <h2 class="hero-role reveal">
+      <span id="typewriter"></span><span class="cursor-blink">|</span>
+    </h2>
+    <p class="hero-tagline reveal">
+      Final-year ICT: Applications Development student building database-driven
+      web applications with C# &amp; ASP.NET MVC — based in Durban, South Africa.
+    </p>
+    <div class="hero-buttons reveal">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+    <div class="hero-socials reveal">
+      <a href="https://github.com/kaylan-443" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.99 3.24 9.22 7.74 10.72.57.1.78-.25.78-.55v-1.94c-3.15.68-3.81-1.52-3.81-1.52-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.74.4-1.24.72-1.53-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 015.73 0c2.19-1.47 3.15-1.16 3.15-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55A11.03 11.03 0 0023.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+      </a>
+      <a href="mailto:kaylanmoonsamy1205@icloud.com" aria-label="Email" class="social-icon">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M2 4h20a1 1 0 011 1v14a1 1 0 01-1 1H2a1 1 0 01-1-1V5a1 1 0 011-1zm19 3.24-8.5 6.12a1 1 0 01-1.16 0L3 7.24V19h18V7.24zM3.5 6l8.5 6.12L20.5 6h-17z"/></svg>
+      </a>
+      <a href="tel:+27715958396" aria-label="Phone" class="social-icon">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.3 21 3 13.7 3 4.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"/></svg>
+      </a>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <span></span>
+  </a>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="container">
+    <p class="section-tag reveal">Who I Am</p>
+    <h2 class="section-title reveal">About <span class="accent">Me</span></h2>
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="photo-frame">
+          <img src="images/profile.jpg" alt="Kaylan Moonsamy" id="profileImg">
+        </div>
+        <div class="photo-badge">📍 Durban, South Africa</div>
+      </div>
+      <div class="about-text reveal">
+        <p>
+          I'm a final-year Diploma student in <strong>ICT: Applications Development</strong> at the
+          Durban University of Technology (DUT), with hands-on experience building
+          database-driven web applications using <strong>C#</strong> and <strong>ASP.NET MVC</strong>.
+        </p>
+        <p>
+          I enjoy turning real-world problems into working software — from student
+          administration systems to fleet management tools — and I'm comfortable across the
+          full stack: designing the database, wiring up the backend logic, and building the
+          interface people actually use.
+        </p>
+        <p>
+          I'm currently looking for an <strong>internship</strong> where I can contribute practical
+          development skills to real projects while continuing to grow as a software developer.
+        </p>
+        <div class="about-info-grid">
+          <div class="info-item">
+            <span class="info-label">Education</span>
+            <span class="info-value">Dip. ICT: Applications Development, DUT (Expected 2026)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Location</span>
+            <span class="info-value">Durban, South Africa</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Languages</span>
+            <span class="info-value">English (B1), IsiZulu (B1)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Focus</span>
+            <span class="info-value">Full-Stack Web Development</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Let's Talk</a>
+      </div>
+    </div>
+
+    <!-- What I do -->
+    <div class="what-i-do">
+      <h3 class="reveal">What I Do</h3>
+      <div class="do-grid">
+        <div class="do-card reveal">
+          <div class="do-icon">🖥️</div>
+          <h4>Full-Stack Web Apps</h4>
+          <p>Building database-driven web applications end-to-end with C#, ASP.NET MVC, SQL Server and Entity Framework.</p>
+        </div>
+        <div class="do-card reveal">
+          <div class="do-icon">🗄️</div>
+          <h4>Database Design</h4>
+          <p>Designing and managing relational databases, from schema design to querying and data management.</p>
+        </div>
+        <div class="do-card reveal">
+          <div class="do-icon">🔌</div>
+          <h4>API Integration</h4>
+          <p>Connecting applications to external services and APIs, including Microsoft Azure cloud services.</p>
+        </div>
+        <div class="do-card reveal">
+          <div class="do-icon">🧪</div>
+          <h4>Testing &amp; Debugging</h4>
+          <p>Writing and testing software carefully, with a focus on clean documentation and reliable, working code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <p class="section-tag reveal">My Toolbox</p>
+    <h2 class="section-title reveal">Skills &amp; <span class="accent">Expertise</span></h2>
+
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <h3><span class="skill-icon">💻</span> Programming</h3>
+        <div class="skill-tags">
+          <span class="tag">C#</span>
+          <span class="tag">Object-Oriented Programming</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3><span class="skill-icon">🌐</span> Web Development</h3>
+        <div class="skill-tags">
+          <span class="tag">ASP.NET MVC</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3><span class="skill-icon">🗄️</span> Databases</h3>
+        <div class="skill-tags">
+          <span class="tag">SQL Server</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Entity Framework</span>
+          <span class="tag">Database Design</span>
+          <span class="tag">Data Management</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3><span class="skill-icon">🛠️</span> Software Development</h3>
+        <div class="skill-tags">
+          <span class="tag">Debugging</span>
+          <span class="tag">Software Testing</span>
+          <span class="tag">Documentation</span>
+          <span class="tag">Problem Solving</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3><span class="skill-icon">🔒</span> IT &amp; Security</h3>
+        <div class="skill-tags">
+          <span class="tag">Information Systems</span>
+          <span class="tag">Information Security</span>
+          <span class="tag">Networking Fundamentals</span>
+          <span class="tag">Support Services</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3><span class="skill-icon">☁️</span> Cloud &amp; APIs</h3>
+        <div class="skill-tags">
+          <span class="tag">Microsoft Azure</span>
+          <span class="tag">API Integration</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <h3><span class="skill-icon">🤝</span> Professional Skills</h3>
+        <div class="skill-tags">
+          <span class="tag">Communication</span>
+          <span class="tag">Collaboration</span>
+          <span class="tag">Analytical Thinking</span>
+          <span class="tag">Time Management</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certs">
+      <h3 class="reveal">Certifications &amp; Training</h3>
+      <div class="certs-grid">
+        <div class="cert-item reveal">
+          <span class="cert-badge">🎓</span>
+          <div>
+            <strong>Introduction to Cybersecurity</strong>
+            <p>DUT / Cisco Networking Academy — Sep 2024</p>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <span class="cert-badge">🎓</span>
+          <div>
+            <strong>Introduction to Packet Tracer</strong>
+            <p>Cisco Networking Academy — Aug 2024</p>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <span class="cert-badge">🎓</span>
+          <div>
+            <strong>NDG Linux Unhatched</strong>
+            <p>Cisco Networking Academy — May 2024</p>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <span class="cert-badge">🎓</span>
+          <div>
+            <strong>Responsible AI</strong>
+            <p>Durban University of Technology — Jun 2025</p>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <span class="cert-badge">🎓</span>
+          <div>
+            <strong>Search Technology</strong>
+            <p>Durban University of Technology — Jun 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <div class="container">
+    <p class="section-tag reveal">My Work</p>
+    <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
+    <p class="section-subtitle reveal">A selection of full-stack applications I've built and shipped to GitHub.</p>
+
+    <div class="projects-grid">
+      <article class="project-card reveal" data-tilt>
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-icon">🏫</span>
+          <span class="project-tag">ASP.NET MVC</span>
+        </div>
+        <h3>ElevateED</h3>
+        <p class="project-sub">School Management &amp; Student Support System</p>
+        <p class="project-desc">
+          An ASP.NET MVC platform that centralises learner, teacher, attendance, assessment,
+          academic support and administrative processes, with database-driven workflows and
+          AI / API-related functionality.
+        </p>
+        <div class="project-stack">
+          <span class="tag tag-sm">C#</span>
+          <span class="tag tag-sm">ASP.NET MVC</span>
+          <span class="tag tag-sm">SQL Server</span>
+          <span class="tag tag-sm">Entity Framework</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaylan-443/ElevateED" target="_blank" rel="noopener" class="project-link">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.99 3.24 9.22 7.74 10.72.57.1.78-.25.78-.55v-1.94c-3.15.68-3.81-1.52-3.81-1.52-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.74.4-1.24.72-1.53-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 015.73 0c2.19-1.47 3.15-1.16 3.15-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55A11.03 11.03 0 0023.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-tilt>
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-icon">🏠</span>
+          <span class="project-tag">C# / .NET</span>
+        </div>
+        <h3>DUT Residence Management System</h3>
+        <p class="project-sub">Student Residence Administration Platform</p>
+        <p class="project-desc">
+          A web-based system to support student residence administration at DUT, built using
+          C# and .NET web application technologies.
+        </p>
+        <div class="project-stack">
+          <span class="tag tag-sm">C#</span>
+          <span class="tag tag-sm">.NET</span>
+          <span class="tag tag-sm">SQL Server</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaylan-443/DUTResSystemWebApp" target="_blank" rel="noopener" class="project-link">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.99 3.24 9.22 7.74 10.72.57.1.78-.25.78-.55v-1.94c-3.15.68-3.81-1.52-3.81-1.52-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.74.4-1.24.72-1.53-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 015.73 0c2.19-1.47 3.15-1.16 3.15-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55A11.03 11.03 0 0023.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-tilt>
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-icon">🚚</span>
+          <span class="project-tag">Business App</span>
+        </div>
+        <h3>Truck Delivery Management &amp; Accounting System</h3>
+        <p class="project-sub">Fleet &amp; Financial Tracking Application</p>
+        <p class="project-desc">
+          A business application to track truck operations and financial activity — including
+          cost tracking, money movement and fleet information — centralising fleet and
+          financial data in one place.
+        </p>
+        <div class="project-stack">
+          <span class="tag tag-sm">C#</span>
+          <span class="tag tag-sm">ASP.NET MVC</span>
+          <span class="tag tag-sm">SQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kaylan-443/Truck_Delivery_System" target="_blank" rel="noopener" class="project-link">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.99 3.24 9.22 7.74 10.72.57.1.78-.25.78-.55v-1.94c-3.15.68-3.81-1.52-3.81-1.52-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.65 1.24 3.3.95.1-.74.4-1.24.72-1.53-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.16a10.9 10.9 0 015.73 0c2.19-1.47 3.15-1.16 3.15-1.16.62 1.57.23 2.73.11 3.02.73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55A11.03 11.03 0 0023.02 11.5C23.02 5.24 18.27.5 12 .5z"/></svg>
+            View Code
+          </a>
+        </div>
+      </article>
+
+      <!-- More projects placeholder -->
+      <article class="project-card project-card-more reveal">
+        <div class="more-icon">➕</div>
+        <h3>More on GitHub</h3>
+        <p class="project-desc">Check out the rest of my repositories and ongoing work.</p>
+        <div class="project-links">
+          <a href="https://github.com/kaylan-443" target="_blank" rel="noopener" class="project-link">
+            View All Repositories →
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Websites / Live Demos -->
+<section id="websites" class="section section-alt">
+  <div class="container">
+    <p class="section-tag reveal">Live On The Web</p>
+    <h2 class="section-title reveal">Websites I've <span class="accent">Built</span></h2>
+    <p class="section-subtitle reveal">
+      Live deployments of my projects will show up here as I publish them. This portfolio
+      itself is the first one, deployed with GitHub Pages.
+    </p>
+
+    <div class="websites-grid">
+      <div class="website-card reveal">
+        <div class="website-preview website-preview-live">
+          <span class="live-badge">● Live</span>
+          <div class="website-preview-icon">🌐</div>
+        </div>
+        <div class="website-info">
+          <h4>This Portfolio</h4>
+          <p>Personal portfolio site — HTML, CSS &amp; JavaScript, deployed via GitHub Pages.</p>
+          <a href="#" class="website-link" id="portfolioLiveLink">Visit Site →</a>
+        </div>
+      </div>
+
+      <div class="website-card website-card-placeholder reveal">
+        <div class="website-preview">
+          <div class="website-preview-icon">🚧</div>
+        </div>
+        <div class="website-info">
+          <h4>Coming Soon</h4>
+          <p>Live demo links for ElevateED, the Residence Management System and the Truck
+             Delivery System will be added here once deployed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interests / Hobbies -->
+<section id="interests" class="section">
+  <div class="container">
+    <p class="section-tag reveal">Beyond The Code</p>
+    <h2 class="section-title reveal">Things I <span class="accent">Enjoy</span></h2>
+
+    <p class="section-subtitle reveal">A few things I enjoy when I'm away from the keyboard (still figuring the rest out).</p>
+
+    <div class="interests-grid">
+      <div class="interest-card reveal">
+        <div class="interest-icon">🏋️</div>
+        <h4>Gym</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">🎮</div>
+        <h4>Gaming</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">🎣</div>
+        <h4>Fishing</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">🥾</div>
+        <h4>Hiking</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">🎬</div>
+        <h4>Watching Anime</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">🏐</div>
+        <h4>Volleyball</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">⚽</div>
+        <h4>Soccer</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">📚</div>
+        <h4>Learning New Things</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">💡</div>
+        <h4>All Things Tech</h4>
+      </div>
+      <div class="interest-card reveal">
+        <div class="interest-icon">📈</div>
+        <h4>Forex Trading</h4>
+      </div>
+    </div>
+
+    <p class="interests-note reveal">More to come as I figure the rest out.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <p class="section-tag reveal">Get In Touch</p>
+    <h2 class="section-title reveal">Let's Build Something <span class="accent">Together</span></h2>
+    <p class="section-subtitle reveal">
+      I'm currently looking for an internship opportunity. Feel free to reach out —
+      I'd love to hear from you.
+    </p>
+
+    <div class="contact-grid">
+      <a href="mailto:kaylanmoonsamy1205@icloud.com" class="contact-card reveal">
+        <div class="contact-icon">📧</div>
+        <h4>Email</h4>
+        <p>kaylanmoonsamy1205@icloud.com</p>
+      </a>
+      <a href="tel:+27715958396" class="contact-card reveal">
+        <div class="contact-icon">📱</div>
+        <h4>Phone</h4>
+        <p>+27 71 595 8396</p>
+      </a>
+      <a href="https://github.com/kaylan-443" target="_blank" rel="noopener" class="contact-card reveal">
+        <div class="contact-icon">💻</div>
+        <h4>GitHub</h4>
+        <p>github.com/kaylan-443</p>
+      </a>
+      <div class="contact-card reveal">
+        <div class="contact-icon">📍</div>
+        <h4>Location</h4>
+        <p>Durban, South Africa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> Kaylan Moonsamy. Built with HTML, CSS &amp; JavaScript.</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
